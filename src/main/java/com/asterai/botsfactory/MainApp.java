@@ -1,0 +1,17 @@
+package com.asterai.botsfactory;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class MainApp {
+
+
+    public static void main(String[] args) {
+        ApplicationContext context =
+                new ClassPathXmlApplicationContext("SpringBeans.xml");
+
+        App app =  (App) context.getBean("mainApp");
+        app.run();
+    }
+
+}
